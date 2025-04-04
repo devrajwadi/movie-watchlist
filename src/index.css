@@ -75,7 +75,7 @@ main {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgb(0, 8, 251));
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgb(0, 8, 251)), url();
 }
 
 .hero h1 {

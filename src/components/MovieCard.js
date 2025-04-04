@@ -1,4 +1,3 @@
-// MovieCard.js
 import React from "react";
 
 const MovieCard = ({ movie, onToggleWatched, onRemoveMovie }) => {
@@ -7,7 +6,14 @@ const MovieCard = ({ movie, onToggleWatched, onRemoveMovie }) => {
   return (
     <div className={`movie-card ${watched ? "watched" : ""}`}>
       <div className="movie-poster">
-        <img src={poster} alt={`${title} poster`} />
+        <img
+          src={poster}
+          alt={`${title} poster`}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "/images/default.jpg"; // Use default image if the poster fails to load
+          }}
+        />
         {watched && <div className="watched-badge">Watched</div>}
       </div>
 

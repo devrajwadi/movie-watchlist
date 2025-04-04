@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+const defaultPoster = "/images/default.jpg";
+
 
 const AddMovieForm = ({ onAddMovie }) => {
   const [title, setTitle] = useState('');
@@ -15,7 +17,7 @@ const AddMovieForm = ({ onAddMovie }) => {
       title,
       director,
       year,
-      poster: "/images/default.jpg",
+      poster: poster || defaultPoster,
       watched: false,
     };
 
