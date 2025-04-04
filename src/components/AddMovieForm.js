@@ -11,12 +11,12 @@ const AddMovieForm = ({ onAddMovie }) => {
     if (!title) return;
 
     const newMovie = {
-      id: Date.now(), 
+      id: Date.now(),
       title,
       director,
       year,
-      poster: poster || defaultPoster,
-      watched: false
+      poster: "/images/default.jpg",
+      watched: false,
     };
 
     onAddMovie(newMovie);
